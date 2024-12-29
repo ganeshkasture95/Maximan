@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "238131491043",
+    "project_id": "maximan-gk-flutter-app",
+    "storage_bucket": "maximan-gk-flutter-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238131491043:android:0e5b961857d77f8faa95d6",
+        "android_client_info": {
+          "package_name": "com.gkmatrix.maximan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLROyyhwP4VrJn2C4DGP-upzedpFXrCkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

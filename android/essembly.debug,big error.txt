@@ -1,0 +1,62 @@
+This error in a nightmare 
+
+
+#_-------------------------
+
+Error: Gradle task assembleDebug failed with exit code 1
+Solution: 
+        find the local.properties file and fix by adding 
+
+                # flutter.minSdkVersion=23 
+
+        If this solution didnt work fot the error assemblyDebug
+
+                then flutter clean android
+
+                and run withoutdebug again 
+
+        else 
+
+                go to build.gradel 
+                and override the --" minsdk=23 "-- which is required 
+
+
+#_--------------------------
+
+Error: App requires Multidex Support 
+Solution:
+    Add the following code in the build.gradle file
+        
+            defaultConfig{
+                ....
+                ....
+                ....
+                multiDexEnabled true
+            } 
+    
+    And Add 
+            dependencies {
+                implementation 'androidx.multidex:multidex:2.0.1'
+                }
+
+#_---------------------------
+
+Problem : If the pub/cache/bin/firestore is not recognized 
+solution : Add it to the envireonment variables if it is not there 
+
+#_----------------------------
+
+Problem: Connection the flutter with the firebase 
+Solution:Using the flutter fire cli 
+        1. Install the flutterfire cli
+        2. Run the command
+                flutterfire configure
+        3. Follow the instructions to connect the flutter with the firebase
+        4. Run the command
+                flutterfire deploy
+              
+        before this you have to add the firebselogin 
+
+#_----------------------------
+
+
