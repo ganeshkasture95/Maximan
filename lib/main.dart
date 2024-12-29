@@ -37,9 +37,14 @@ class MyApp extends StatelessWidget {
           switch (snapshot.connectionState) {
             case ConnectionState.done:
               final user = FirebaseAuth.instance.currentUser;
-              if (user == null) {
+
+              if (user?.emailVerified ?? false) {
+                print("You are verified");
                 return const RegisterView();
+              } else {
+                print("You are not verified Please verify your email");
               }
+
               return const Text("Done");
             default:
               return const Text("Loading...");
