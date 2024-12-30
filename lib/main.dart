@@ -40,13 +40,17 @@ class MyApp extends StatelessWidget {
           case ConnectionState.done:
             final user = FirebaseAuth.instance.currentUser;
 
-            // if (user?.emailVerified ?? false) {
-            //   print("You are verified");
-            //   return const Text("done");
-            // } else {
-            //   return const VerifyEmailView();
-            // }
-            return const LoginView();
+            if (user != null) {
+              if (user.emailVerified) {
+                print("email verified");
+              } else {
+                return const VerifyEmailView();
+              }
+            } else {
+              return const LoginView();
+            }
+
+            return const Text("Done");
 
           default:
             return const CircularProgressIndicator(
