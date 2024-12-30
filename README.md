@@ -1,4 +1,4 @@
-# maximan
+# Maximan
 
 A new Flutter project.
 
